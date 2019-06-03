@@ -152,7 +152,7 @@ h5 {
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
 
 /* 
-Container wrapper 
+Container/Full Page
 */
 
 .container {
@@ -224,7 +224,7 @@ Banner
 }
 
 /* 
-Main section
+Main Section
 */
 
 main {
@@ -232,6 +232,10 @@ main {
   flex-wrap: wrap;
   justify-content: space-between;
   border-bottom: 2px solid black;
+}
+
+main img {
+  width: 100%;
 }
 
 .section-top {
@@ -261,4 +265,104 @@ footer {
 .copyright {
   margin: 4% 0 2% 0;
   text-align: center;
+}
+
+/* 
+Tablet Media Queries
+*/
+
+@media (max-width: 800px) {
+  .container {
+    width: 95%;
+  }
+  /* Header */
+  header {
+    flex-direction: column;
+  }
+
+  header img {
+    order: -1;
+    margin-bottom: 4%;
+  }
+
+  /* Banner */
+  .banner-content {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .banner-image {
+    display: none;
+  }
+}
+
+/* 
+Mobile Media Queries
+*/
+
+@media (max-width: 500px) {
+  .container {
+    width: 100%;
+  }
+
+  /* Header */
+  header {
+    border-bottom: 1px solid grey;
+  }
+
+  header nav {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header nav a {
+    width: 100%;
+    border-top: 1px solid grey;
+    padding: 4%;
+    font-size: 1.2em;
+  }
+
+  /* Banner */
+  .banner {
+    width: 90%;
+    margin: 7% auto;
+    padding-bottom: 15%;
+  }
+
+  /* Main Section */
+  main {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 5%;
+    padding-bottom: 4%;
+  }
+
+  main img {
+    height: 131px;
+    margin: 5% 0;
+  }
+
+  .section-top {
+    width: 100%;
+    margin: 7% 0 5% 0;
+  }
+
+  .section-bottom {
+    width: 100%;
+  }
+
+  /* Footer */
+  footer {
+    width: 90%;
+    margin: 7% auto;
+  }
+
+  .phone {
+    padding: 2% 0;
+  }
+
+  .copyright {
+    padding-top: 5%;
+  }
 }
