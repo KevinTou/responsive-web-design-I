@@ -156,7 +156,7 @@ Container/Full Page
 */
 
 .container {
-  width: 876px;
+  max-width: 876px;
   margin: 0 auto;
 }
 
